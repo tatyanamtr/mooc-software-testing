@@ -9,9 +9,15 @@ public class NumFinderMain {
         // nf.find(new int[] {4, 25, 7, 9});
 
         // this crashes
-        nf.find(new int[] {4, 3, 2, 1});
+        try {
+            nf.find(new int[]{0});
+            System.out.println(nf.getLargest());
+            System.out.println(nf.getSmallest());
+        }
+        catch (Exception e) {
+            System.out.println("Something went wrong!");
+        }
 
-        System.out.println(nf.getLargest());
-        System.out.println(nf.getSmallest());
+
     }
 }
