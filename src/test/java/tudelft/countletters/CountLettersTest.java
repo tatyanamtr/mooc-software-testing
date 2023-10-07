@@ -16,5 +16,15 @@ public class CountLettersTest {
         int words = new CountLetters().count("cats|dog");
         Assertions.assertEquals(1, words);
     }
+    @Test
+    public void firstWordEndsWithR() {
+        int words = new CountLetters().count("catr|dog");
+        Assertions.assertEquals(1, words);
+    }
+    @Test
+    public void bothWordsEndsWithR() {
+        int words = new CountLetters().count("cat|dogr");
+        Assertions.assertEquals(1, words);
+    }
 
 }
